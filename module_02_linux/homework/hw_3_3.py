@@ -29,4 +29,32 @@
 
 
 def decrypt(s: str) -> str:
-    """Put your code here"""
+    """
+    Func decodes input str. Symbol before '..' is removed, symbol before '.' is not changing. All '.' are removed
+    :param s: input str
+    :return: decode str
+    """
+    result = []
+
+    for symbol in s:
+        result.append(symbol)
+        if len(result) > 2 and (result[-2], result[-1]) == ('.', '.'):
+            result.pop(-1)
+            result.pop(-1)
+            if result:
+                result.pop(-1)
+    decode_str = ''.join(symbol for symbol in result if symbol != '.')
+    return decode_str
+
+
+if __name__ == "__main__":
+    decrypt('абра-кадабра.')
+    # decrypt('абраа.. - кадабра')
+    # decrypt('абраа.. -.кадабра')
+    # decrypt('абра - -..кадабра')
+    # decrypt('абрау... - кадабра')
+    # decrypt('абра........')
+    # decrypt('абр......a.')
+    # decrypt('1..2.3')
+    # decrypt('.')
+    # decrypt('1........')
