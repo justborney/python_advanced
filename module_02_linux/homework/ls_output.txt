@@ -1,0 +1,12 @@
+итого 609888
+-rw-rw-r-- 1 mike_p mike_p         0 сен 12 20:33 ls_output.txt
+-rw-rw-r-- 1 mike_p mike_p 624480343 сен 11 21:18 pycharm-professional-2021.2.1.tar.gz
+drwxr-xr-x 4 mike_p mike_p      4096 мая  7 00:27 snap
+drwxr-xr-x 2 mike_p mike_p      4096 мая  3 23:55 Видео
+drwxr-xr-x 2 mike_p mike_p      4096 мая  3 23:55 Документы
+drwxr-xr-x 2 mike_p mike_p      4096 сен 11 21:23 Загрузки
+drwxr-xr-x 2 mike_p mike_p      4096 мая  7 00:56 Изображения
+drwxr-xr-x 2 mike_p mike_p      4096 мая  3 23:55 Музыка
+drwxr-xr-x 2 mike_p mike_p      4096 мая  3 23:55 Общедоступные
+drwxr-xr-x 2 mike_p mike_p      4096 сен 11 21:14 Рабочий стол
+drwxr-xr-x 2 mike_p mike_p      4096 мая  3 23:55 Шаблоны
