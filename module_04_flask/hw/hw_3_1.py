@@ -14,14 +14,24 @@ Endpoint должен быть по url = /ps и принимать входны
     >>> command = shlex.split(command_str)
     >>> result = subprocess.run(command, capture_output=True)
 """
+from typing import List
 from flask import Flask
+from flask import request
+import shlex
+import subprocess
 
 app = Flask(__name__)
 
 
-@app.route("/ps", methods=["GET"])
+@app.route("/ps/", methods=["GET"])
 def _ps():
-    pass
+    args: List[str] = request.args.getlist("args", type=str)
+
+    flag = args[0]
+    command_str = f"ps {flag}"
+    command = shlex.split(command_str)
+    result = subprocess.run(command, capture_output=True)
+    return f'<pre>{result.stdout.decode()}</pre>'
 
 
 if __name__ == "__main__":

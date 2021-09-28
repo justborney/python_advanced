@@ -12,3 +12,21 @@
     >>> command = shlex.split(command_str)
     >>> result = subprocess.run(command, capture_output=True)
 """
+from flask import Flask
+import shlex
+import subprocess
+
+app = Flask(__name__)
+
+
+@app.route("/uptime", methods=["POST"])
+def uptime():
+    command_str = f"uptime"
+    command = shlex.split(command_str)
+    UPTIME = subprocess.run(command, capture_output=True)
+    return f"Current uptime is '{UPTIME}'"
+
+
+if __name__ == "__main__":
+    app.config["WTF_CSRF_ENABLED"] = False
+    app.run(debug=True)
