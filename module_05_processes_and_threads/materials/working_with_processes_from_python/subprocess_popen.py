@@ -9,11 +9,15 @@ def run_program():
         p = subprocess.Popen(
             ['python', 'test_program.py'],
             stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
+            stderr=subprocess.PIPE,
+            stdin=subprocess.PIPE
         )
         print('Process number {} started. PID: {}'.format(
             pnum, p.pid
         ))
+
+        p.communicate()
+
         procs.append(p)
 
     for proc in procs:
