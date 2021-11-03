@@ -31,4 +31,19 @@ from typing import List
 
 
 def my_t9(input_numbers: str) -> List[str]:
-    pass
+    number_letter_dict = {2: 'abc', 3: 'def', 4: 'ghi', 5: 'jkl', 6: 'mno', 7: 'pqrs', 8: 'tuv', 9: 'wxyz'}
+    words = []
+    all_words = []
+    all_letters = []
+    # word = ''
+    for i in range(len(input_numbers)):
+        letters = ''
+        for symbol in number_letter_dict.get(int(input_numbers[i])):
+            letters += symbol
+        all_letters.insert(i, letters)
+
+    print(all_letters)
+
+
+if __name__ == '__main__':
+    my_t9('327')

@@ -13,6 +13,8 @@
 Запустите эту программу, соберите логи и посчитайте
 среднее время выполнения функции measure_me.
 """
+import datetime
+import linecache
 import logging
 import random
 from typing import List
@@ -45,7 +47,7 @@ def measure_me(nums: List[int]) -> List[List[int]]:
                     logger.debug(f"Found {target}")
                     results.append([nums[i], nums[left], nums[right]])
                     logger.debug(
-                            f"Appended {[nums[i], nums[left], nums[right]]} to result"
+                        f"Appended {[nums[i], nums[left], nums[right]]} to result"
                     )
                     while left < right and nums[left] == nums[left + 1]:
                         left += 1
@@ -67,7 +69,15 @@ def measure_me(nums: List[int]) -> List[List[int]]:
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level="DEBUG")
+    logging.basicConfig(level="DEBUG", filename='measure.log', filemode='w',
+                        format='%(asctime)s. %(message)s', datefmt='%H:%M:%S')
     for it in range(15):
-        data_line = get_data_line(10 ** 3)
+        data_line = get_data_line(10 ** 2)
         measure_me(data_line)
+    start_line = linecache.getline('measure.log', 3)
+    start_time = datetime.datetime.strptime(start_line[:8], '%H:%M:%S')
+    with open('measure.log', 'r') as log_file:
+        finish_line = log_file.readlines()[-1]
+    finish_time = datetime.datetime.strptime(finish_line[:8], '%H:%M:%S')
+    work_time = finish_time - start_time
+    print('"Measure me" working time is', work_time)
