@@ -22,15 +22,12 @@ logger = logging.getLogger("password_checker")
 
 
 def check_if_password_is_weak(password_string: str) -> bool:
-    password_is_weak = False
     with open('/usr/share/dict/words', 'r') as eng_dict:
         lines = eng_dict.readlines()
     for line in lines:
-        if len(line) > 5:
-            if line[:-1] in password_string:
-                password_is_weak = True
-                break
-    return password_is_weak
+        if len(line) > 5 and line[:-1] in password_string:
+            return True
+    return False
 
 
 def input_and_check_password():

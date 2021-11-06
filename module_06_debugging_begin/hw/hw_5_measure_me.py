@@ -14,7 +14,6 @@
 среднее время выполнения функции measure_me.
 """
 import datetime
-import linecache
 import logging
 import random
 from typing import List
@@ -71,13 +70,19 @@ def measure_me(nums: List[int]) -> List[List[int]]:
 if __name__ == "__main__":
     logging.basicConfig(level="DEBUG", filename='measure.log', filemode='w',
                         format='%(asctime)s. %(message)s', datefmt='%H:%M:%S')
-    for it in range(15):
+    working_time = datetime.timedelta()
+    iterations_count = 15
+    f = open('measure.log', 'w')
+    f.close()
+    for it in range(iterations_count):
         data_line = get_data_line(10 ** 2)
         measure_me(data_line)
-    start_line = linecache.getline('measure.log', 3)
-    start_time = datetime.datetime.strptime(start_line[:8], '%H:%M:%S')
     with open('measure.log', 'r') as log_file:
-        finish_line = log_file.readlines()[-1]
-    finish_time = datetime.datetime.strptime(finish_line[:8], '%H:%M:%S')
-    work_time = finish_time - start_time
-    print('"Measure me" working time is', work_time)
+        log_data = log_file.readlines()
+        for line in log_data:
+            if line.endswith('Enter measure_me\n'):
+                start_time = datetime.datetime.strptime(line[:8], '%H:%M:%S')
+            elif line.endswith('Leave measure_me\n'):
+                finish_time = datetime.datetime.strptime(line[:8], '%H:%M:%S')
+                working_time += finish_time - start_time
+    print('"Measure me" average working time is', round((working_time.seconds / iterations_count), 2), 'sec')

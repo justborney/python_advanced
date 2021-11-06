@@ -21,10 +21,20 @@ from typing import List
 def get_average_salary_corrected(salaries: List[int]) -> float:
     total = sum(salaries)
     count = len(salaries)
+    minimum, maximum, min_count, max_count = 0 * 4
     if len(set(salaries)) >= 3:
-        for salary in range(len(salaries)):
-            if salaries[salary] != max(salaries) and salaries[salary] != min(salaries):
-                total -= salaries[salary]
-                count -= 1
-    average_salary = round(total / count, 2)
+        for salary in salaries:
+            if salary < minimum:
+                minimum = salary
+                min_count = 1
+            elif salary == minimum:
+                min_count += 1
+            if salary > maximum:
+                maximum = salary
+                max_count = 1
+            elif salary == maximum:
+                max_count += 1
+            total += salaries[salary]
+            count += 1
+    average_salary = round((total - minimum * max_count - maximum * max_count) / (count + min_count + max_count), 2)
     return average_salary

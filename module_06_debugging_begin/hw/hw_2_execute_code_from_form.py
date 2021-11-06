@@ -21,6 +21,8 @@ from wtforms.validators import InputRequired
 app = Flask(__name__)
 
 logger = logging.getLogger("handler_logging")
+logging.basicConfig(level=logging.ERROR, filename='exec.log', filemode='a',
+                    format='%(asctime)s, OS Error', datefmt='%H:%M:%S')
 
 
 class CodeForm(FlaskForm):
@@ -63,12 +65,9 @@ def run_code():
 
 @app.errorhandler(OSError)
 def handle_exception(e: OSError):
-    logging.basicConfig(level='ERROR', filename='exec.log', filemode='a',
-                        format='%(asctime)s, OS Error', datefmt='%H:%M:%S')
     return 'OS Error', 500
 
 
 if __name__ == "__main__":
     app.config["WTF_CSRF_ENABLED"] = False
-
     app.run(debug=True)
