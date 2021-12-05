@@ -41,4 +41,4 @@ def calc(args):
 
 
 if __name__ == '__main__':
-    calc([1, 4, 'l'])
+    calc([1, 4, '+'])

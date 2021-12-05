@@ -15,7 +15,8 @@ class CustomHandler(logging.Handler):
 
     def emit(self, record: logging.LogRecord) -> None:
         message = self.format(record)
-        with open(self.file_name + record.levelname + '.log', mode=self.mode) as file:
+        # with open(self.file_name + record.levelname + '.log', mode=self.mode) as file:
+        with open(self.file_name, mode=self.mode) as file:
             file.write(message + '\n')
 
 
@@ -45,7 +46,7 @@ dict_config = {
             "()": CustomRotatingHandler,
             "level": logging.DEBUG,
             "formatter": "simple",
-            "file_name": "",
+            "filename": "my_app.log",
             "when": "h",
             "interval": 10,
             "backupCount": 0,
@@ -62,7 +63,8 @@ dict_config = {
         },
         "hw_07.01.utils": {
             "level": "INFO",
-            "handlers": ["screen", "file", "rotate"],
+            # "handlers": ["screen", "file", "rotate"],
+            "handlers": ["screen", "rotate"],
         }
     },
 }
