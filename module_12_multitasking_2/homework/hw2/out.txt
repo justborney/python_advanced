@@ -1,0 +1,284 @@
+UID          PID    PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+root           1       0  0 41984 11804   1 12:55 ?        00:00:02 /sbin/init splash
+root           2       0  0     0     0   1 12:55 ?        00:00:00 [kthreadd]
+root           3       2  0     0     0   0 12:55 ?        00:00:00 [rcu_gp]
+root           4       2  0     0     0   0 12:55 ?        00:00:00 [rcu_par_gp]
+root           6       2  0     0     0   0 12:55 ?        00:00:00 [kworker/0:0H-events_highpri]
+root           9       2  0     0     0   0 12:55 ?        00:00:00 [mm_percpu_wq]
+root          10       2  0     0     0   0 12:55 ?        00:00:00 [rcu_tasks_rude_]
+root          11       2  0     0     0   0 12:55 ?        00:00:00 [rcu_tasks_trace]
+root          12       2  0     0     0   0 12:55 ?        00:00:00 [ksoftirqd/0]
+root          13       2  0     0     0   3 12:55 ?        00:00:03 [rcu_sched]
+root          14       2  0     0     0   0 12:55 ?        00:00:00 [migration/0]
+root          15       2  0     0     0   0 12:55 ?        00:00:00 [idle_inject/0]
+root          16       2  0     0     0   0 12:55 ?        00:00:00 [cpuhp/0]
+root          17       2  0     0     0   1 12:55 ?        00:00:00 [cpuhp/1]
+root          18       2  0     0     0   1 12:55 ?        00:00:00 [idle_inject/1]
+root          19       2  0     0     0   1 12:55 ?        00:00:00 [migration/1]
+root          20       2  0     0     0   1 12:55 ?        00:00:00 [ksoftirqd/1]
+root          22       2  0     0     0   1 12:55 ?        00:00:00 [kworker/1:0H-kblockd]
+root          23       2  0     0     0   2 12:55 ?        00:00:00 [cpuhp/2]
+root          24       2  0     0     0   2 12:55 ?        00:00:00 [idle_inject/2]
+root          25       2  0     0     0   2 12:55 ?        00:00:00 [migration/2]
+root          26       2  0     0     0   2 12:55 ?        00:00:00 [ksoftirqd/2]
+root          28       2  0     0     0   2 12:55 ?        00:00:00 [kworker/2:0H-events_highpri]
+root          29       2  0     0     0   3 12:55 ?        00:00:00 [cpuhp/3]
+root          30       2  0     0     0   3 12:55 ?        00:00:00 [idle_inject/3]
+root          31       2  0     0     0   3 12:55 ?        00:00:00 [migration/3]
+root          32       2  0     0     0   3 12:55 ?        00:00:00 [ksoftirqd/3]
+root          34       2  0     0     0   3 12:55 ?        00:00:00 [kworker/3:0H-kblockd]
+root          35       2  0     0     0   0 12:55 ?        00:00:00 [kdevtmpfs]
+root          36       2  0     0     0   1 12:55 ?        00:00:00 [netns]
+root          37       2  0     0     0   1 12:55 ?        00:00:00 [inet_frag_wq]
+root          38       2  0     0     0   3 12:55 ?        00:00:00 [kauditd]
+root          41       2  0     0     0   2 12:55 ?        00:00:00 [khungtaskd]
+root          42       2  0     0     0   1 12:55 ?        00:00:00 [oom_reaper]
+root          43       2  0     0     0   1 12:55 ?        00:00:00 [writeback]
+root          44       2  0     0     0   1 12:55 ?        00:00:00 [kcompactd0]
+root          45       2  0     0     0   1 12:55 ?        00:00:00 [ksmd]
+root          46       2  0     0     0   1 12:55 ?        00:00:00 [khugepaged]
+root          93       2  0     0     0   1 12:55 ?        00:00:00 [kintegrityd]
+root          94       2  0     0     0   1 12:55 ?        00:00:00 [kblockd]
+root          95       2  0     0     0   1 12:55 ?        00:00:00 [blkcg_punt_bio]
+root          96       2  0     0     0   1 12:55 ?        00:00:00 [tpm_dev_wq]
+root          97       2  0     0     0   1 12:55 ?        00:00:00 [ata_sff]
+root          98       2  0     0     0   1 12:55 ?        00:00:00 [md]
+root          99       2  0     0     0   1 12:55 ?        00:00:00 [edac-poller]
+root         100       2  0     0     0   1 12:55 ?        00:00:00 [devfreq_wq]
+root         101       2  0     0     0   1 12:55 ?        00:00:00 [watchdogd]
+root         102       2  0     0     0   3 12:55 ?        00:00:03 [kworker/u8:1-events_unbound]
+root         103       2  0     0     0   2 12:55 ?        00:00:00 [kworker/2:1H-kblockd]
+root         105       2  0     0     0   2 12:55 ?        00:00:00 [kswapd0]
+root         106       2  0     0     0   2 12:55 ?        00:00:00 [ecryptfs-kthrea]
+root         108       2  0     0     0   0 12:55 ?        00:00:00 [kthrotld]
+root         109       2  0     0     0   2 12:55 ?        00:00:00 [irq/122-aerdrv]
+root         110       2  0     0     0   3 12:55 ?        00:00:00 [irq/123-aerdrv]
+root         111       2  0     0     0   1 12:55 ?        00:00:00 [irq/124-aerdrv]
+root         112       2  0     0     0   1 12:55 ?        00:00:00 [irq/124-pciehp]
+root         113       2  0     0     0   2 12:55 ?        00:00:00 [acpi_thermal_pm]
+root         114       2  0     0     0   0 12:55 ?        00:00:00 [vfio-irqfd-clea]
+root         118       2  0     0     0   0 12:55 ?        00:00:00 [ipv6_addrconf]
+root         127       2  0     0     0   0 12:55 ?        00:00:00 [kstrp]
+root         130       2  0     0     0   2 12:55 ?        00:00:00 [zswap-shrink]
+root         131       2  0     0     0   1 12:55 ?        00:00:00 [kworker/u9:0-rb_allocator]
+root         138       2  0     0     0   0 12:55 ?        00:00:00 [charger_manager]
+root         160       2  0     0     0   0 12:55 ?        00:00:00 [kworker/0:1H-kblockd]
+root         188       2  0     0     0   3 12:55 ?        00:00:00 [scsi_eh_0]
+root         189       2  0     0     0   1 12:55 ?        00:00:00 [scsi_tmf_0]
+root         190       2  0     0     0   1 12:55 ?        00:00:00 [scsi_eh_1]
+root         191       2  0     0     0   3 12:55 ?        00:00:00 [scsi_tmf_1]
+root         198       2  0     0     0   0 12:55 ?        00:00:07 [irq/128-SYNA306]
+root         218       2  0     0     0   0 12:55 ?        00:00:00 [jbd2/sda5-8]
+root         219       2  0     0     0   2 12:55 ?        00:00:00 [ext4-rsv-conver]
+root         220       2  0     0     0   1 12:55 ?        00:00:00 [kworker/1:1H-kblockd]
+root         232       2  0     0     0   3 12:55 ?        00:00:00 [kworker/3:1H-kblockd]
+root         264       1  0 15048 29692   1 12:55 ?        00:00:01 /lib/systemd/systemd-journald
+root         289       1  0  6041  7732   3 12:55 ?        00:00:01 /lib/systemd/systemd-udevd
+root         294       2  0     0     0   3 12:55 ?        00:00:00 [loop0]
+root         299       2  0     0     0   0 12:55 ?        00:00:00 [loop1]
+root         310       2  0     0     0   3 12:55 ?        00:00:00 [loop2]
+root         314       2  0     0     0   3 12:55 ?        00:00:00 [loop3]
+root         318       2  0     0     0   1 12:55 ?        00:00:00 [loop4]
+root         319       2  0     0     0   3 12:55 ?        00:00:00 [loop5]
+root         320       2  0     0     0   3 12:55 ?        00:00:00 [loop6]
+root         329       2  0     0     0   2 12:55 ?        00:00:00 [loop7]
+root         350       2  0     0     0   1 12:55 ?        00:00:00 [loop8]
+root         351       2  0     0     0   0 12:55 ?        00:00:00 [loop9]
+root         352       2  0     0     0   2 12:55 ?        00:00:00 [loop10]
+root         353       2  0     0     0   1 12:55 ?        00:00:00 [loop11]
+root         354       2  0     0     0   1 12:55 ?        00:00:00 [loop12]
+root         356       2  0     0     0   1 12:55 ?        00:00:00 [loop13]
+root         361       2  0     0     0   0 12:55 ?        00:00:00 [loop14]
+root         363       2  0     0     0   3 12:55 ?        00:00:00 [irq/129-mei_me]
+root         367       2  0     0     0   2 12:55 ?        00:00:00 [loop15]
+root         370       2  0     0     0   0 12:55 ?        00:00:00 [cfg80211]
+root         372       2  0     0     0   1 12:55 ?        00:00:00 [loop16]
+root         375       2  0     0     0   1 12:55 ?        00:00:00 [kworker/u9:2-hci0]
+root         380       2  0     0     0   2 12:55 ?        00:00:00 [loop17]
+root         381       2  0     0     0   3 12:55 ?        00:00:00 [card0-crtc0]
+root         382       2  0     0     0   3 12:55 ?        00:00:00 [card0-crtc1]
+root         383       2  0     0     0   3 12:55 ?        00:00:00 [card0-crtc2]
+root         385       2  0     0     0   2 12:55 ?        00:00:01 [irq/131-iwlwifi]
+root         388       2  0     0     0   3 12:55 ?        00:00:00 [loop18]
+root         391       2  0     0     0   2 12:55 ?        00:00:00 [cryptd]
+root         407       2  0     0     0   1 12:55 ?        00:00:00 [loop19]
+root         417       2  0     0     0   1 12:55 ?        00:00:00 [loop20]
+root         422       2  0     0     0   1 12:55 ?        00:00:00 [loop21]
+root         656       2  0     0     0   1 12:55 ?        00:00:00 [jbd2/sda6-8]
+root         657       2  0     0     0   2 12:55 ?        00:00:00 [ext4-rsv-conver]
+root         658       1  0  4459  2420   0 12:55 ?        00:00:00 /sbin/mount.ntfs /dev/sda1 /mnt/share_disk -o rw,uid=1000
+systemd+     673       1  0  6042 13240   2 12:55 ?        00:00:01 /lib/systemd/systemd-resolved
+systemd+     675       1  0 22565  6004   0 12:55 ?        00:00:00 /lib/systemd/systemd-timesyncd
+root         716       1  0 61890  8036   1 12:55 ?        00:00:00 /usr/lib/accountsservice/accounts-daemon
+root         717       1  0   637   784   1 12:55 ?        00:00:08 /usr/sbin/acpid
+avahi        719       1  0  2135  3452   0 12:55 ?        00:00:00 avahi-daemon: running [mike-p-laptop.local]
+root         720       1  0  2107  4620   3 12:55 ?        00:00:00 /usr/lib/bluetooth/bluetoothd
+root         721       1  0  4513  2836   2 12:55 ?        00:00:00 /usr/sbin/cron -f
+root         722       1  0  9203  8348   1 12:55 ?        00:00:00 /usr/sbin/cupsd -l
+message+     724       1  0  2520  6640   0 12:55 ?        00:00:03 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         725       1  0 156439 22412  2 12:55 ?        00:00:10 /usr/sbin/NetworkManager --no-daemon
+root         733       1  0 20476  3704   3 12:55 ?        00:00:00 /usr/sbin/irqbalance --foreground
+root         738       1  0 11986 20224   1 12:55 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         744       1  0 58770 10880   3 12:55 ?        00:00:02 /usr/lib/policykit-1/polkitd --no-debug
+syslog       747       1  0 56089  5088   0 12:55 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root         752       1  0 292145 36896  0 12:55 ?        00:00:03 /usr/lib/snapd/snapd
+root         757       1  0 61126  6584   0 12:55 ?        00:00:00 /usr/libexec/switcheroo-control
+root         760       1  0  4197  8364   3 12:55 ?        00:00:00 /lib/systemd/systemd-logind
+root         761       1  0 70625 10724   0 12:55 ?        00:00:10 /usr/sbin/thermald --systemd --dbus-enable --adaptive
+root         763       1  0 98295 13448   3 12:55 ?        00:00:00 /usr/lib/udisks2/udisksd
+root         764       1  0  3550  9456   0 12:55 ?        00:00:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        771     719  0  2088   328   2 12:55 ?        00:00:00 avahi-daemon: chroot helper
+root         817       1  0 44631 12832   0 12:55 ?        00:00:00 /usr/sbin/cups-browsed
+root         820       1  0 78616 10920   2 12:55 ?        00:00:00 /usr/sbin/ModemManager
+root         835       1  0 373161 41696  1 12:55 ?        00:00:04 /usr/bin/containerd
+root         861       1  0 62113  8688   1 12:55 ?        00:00:00 /usr/sbin/gdm3
+debian-+     880       1  0 11091 39616   0 12:55 ?        00:00:00 /usr/bin/tor --defaults-torrc /usr/share/tor/tor-service-defaults-torrc -f /etc/tor/torrc --RunAsDaemon 0
+root         901       1  0 31692 22896   1 12:55 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         921       1  0 65378 10588   1 12:55 ?        00:00:01 /usr/lib/upower/upowerd
+rtkit        934       1  0 38235  2960   2 12:55 ?        00:00:00 /usr/libexec/rtkit-daemon
+colord      1320       1  0 63840 15176   0 12:56 ?        00:00:00 /usr/libexec/colord
+root        1409       1  0 696205 76368  2 12:56 ?        00:00:02 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1412       1  0 20150 16908   3 12:56 ?        00:00:00 /usr/sbin/nmbd --foreground --no-process-group
+whoopsie    1413       1  0 81725 15468   0 12:56 ?        00:00:00 /usr/bin/whoopsie -f
+kernoops    1414       1  0  2816   452   1 12:56 ?        00:00:00 /usr/sbin/kerneloops --test
+kernoops    1416       1  0  2816   448   3 12:56 ?        00:00:00 /usr/sbin/kerneloops
+root        1429       1  0 23963 25452   0 12:56 ?        00:00:00 /usr/sbin/smbd --foreground --no-process-group
+root        1432    1429  0 23426 10252   0 12:56 ?        00:00:00 /usr/sbin/smbd --foreground --no-process-group
+root        1433    1429  0 23424  7988   2 12:56 ?        00:00:00 /usr/sbin/smbd --foreground --no-process-group
+root        1434    1429  0 23965 11388   2 12:56 ?        00:00:00 /usr/sbin/smbd --foreground --no-process-group
+root        1464       2  0   624   584   1 12:56 ?        00:00:00 bpfilter_umh
+root        1745     861  0 80874 10720   1 12:58 ?        00:00:00 gdm-session-worker [pam/gdm-password]
+mike_p      1757       1  0  4944 10952   0 12:58 ?        00:00:00 /lib/systemd/systemd --user
+mike_p      1758    1757  0 42335  3720   0 12:58 ?        00:00:00 (sd-pam)
+mike_p      1763    1757  0 391471 20464  0 12:58 ?        00:00:00 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+mike_p      1765    1757  0 130207 26916  0 12:58 ?        00:00:00 /usr/libexec/tracker-miner-fs
+mike_p      1768    1757  0  2690  8024   3 12:58 ?        00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+mike_p      1771       1  0 62317  8156   1 12:58 ?        00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+mike_p      1779    1757  0 62147  7908   3 12:58 ?        00:00:00 /usr/libexec/gvfsd
+mike_p      1794    1757  0 94586  6496   0 12:58 ?        00:00:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+mike_p      1796    1757  0 80794  9624   1 12:58 ?        00:00:00 /usr/libexec/gvfs-udisks2-volume-monitor
+mike_p      1808    1757  0 61168  6728   0 12:58 ?        00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+mike_p      1812    1757  0 81399  9192   3 12:58 ?        00:00:00 /usr/libexec/gvfs-afc-volume-monitor
+mike_p      1817    1757  0 61738  6556   3 12:58 ?        00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+mike_p      1821    1757  0 61187  6276   2 12:58 ?        00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+mike_p      1825    1757  0 139071 37080  1 12:58 ?        00:00:00 /usr/libexec/goa-daemon
+mike_p      1832    1757  0 80948  9104   3 12:58 ?        00:00:00 /usr/libexec/goa-identity-service
+root        1843       2  0     0     0   2 12:58 ?        00:00:00 [krfcommd]
+mike_p      1845    1745  0 43215  6708   2 12:58 tty2     00:00:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+mike_p      1848    1845  5 236616 100440 2 12:58 tty2     00:05:02 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+mike_p      1885    1845  0 49266 13704   3 12:58 tty2     00:00:00 /usr/libexec/gnome-session-binary --systemd --systemd --session=ubuntu
+mike_p      1956    1885  0  1510   456   0 12:58 ?        00:00:00 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd --session=ubuntu
+mike_p      1977    1757  0 76365  6600   0 12:58 ?        00:00:00 /usr/libexec/at-spi-bus-launcher
+mike_p      1982    1977  0  1812  4376   1 12:58 ?        00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+mike_p      1992    1757  0 24729  4300   1 12:58 ?        00:00:00 /usr/libexec/gnome-session-ctl --monitor
+mike_p      1999    1757  0 123475 16664  3 12:58 ?        00:00:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+mike_p      2014    1757  4 1055415 283824 3 12:58 ?       00:03:39 /usr/bin/gnome-shell
+mike_p      2038    2014  0 80049  8728   2 12:58 ?        00:00:16 ibus-daemon --panel disable --xim
+mike_p      2042    2038  0 61391  7292   1 12:58 ?        00:00:00 /usr/libexec/ibus-dconf
+mike_p      2043    2038  0 70580 29692   3 12:58 ?        00:00:03 /usr/libexec/ibus-extension-gtk3
+mike_p      2045    1757  0 50782 24724   2 12:58 ?        00:00:04 /usr/libexec/ibus-x11 --kill-daemon
+mike_p      2050    1757  0 61375  7212   1 12:58 ?        00:00:00 /usr/libexec/ibus-portal
+mike_p      2060    1757  0 40710  7524   1 12:58 ?        00:00:02 /usr/libexec/at-spi2-registryd --use-gnome-session
+mike_p      2064    1757  0 61153  6292   2 12:58 ?        00:00:00 /usr/libexec/xdg-permission-store
+mike_p      2067    1757  0 145281 20340  2 12:58 ?        00:00:00 /usr/libexec/gnome-shell-calendar-server
+mike_p      2075    1757  0 269857 26028  0 12:58 ?        00:00:00 /usr/libexec/evolution-source-registry
+geoclue     2083       1  0 229877 21180  3 12:58 ?        00:00:01 /usr/libexec/geoclue
+mike_p      2086    1757  0 232451 30932  1 12:58 ?        00:00:00 /usr/libexec/evolution-calendar-factory
+mike_p      2088    1757  0 39122  6000   0 12:58 ?        00:00:00 /usr/libexec/dconf-service
+mike_p      2102    1757  0 170597 30228  1 12:58 ?        00:00:00 /usr/libexec/evolution-addressbook-factory
+mike_p      2117    1757  0 685681 27060  0 12:58 ?        00:00:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+mike_p      2128    1757  0 79699  6912   3 12:58 ?        00:00:00 /usr/libexec/gsd-a11y-settings
+mike_p      2129    1757  0 178691 27732  1 12:58 ?        00:00:00 /usr/libexec/gsd-color
+mike_p      2130    1757  0 116180 26576  3 12:58 ?        00:00:00 /usr/libexec/gsd-datetime
+mike_p      2132    1757  0 80473  9104   0 12:58 ?        00:00:00 /usr/libexec/gsd-housekeeping
+mike_p      2134    1757  0 106253 25636  1 12:58 ?        00:00:00 /usr/libexec/gsd-keyboard
+mike_p      2135    1757  0 226617 28052  0 12:58 ?        00:00:00 /usr/libexec/gsd-media-keys
+mike_p      2137    1757  0 173054 28628  0 12:58 ?        00:00:00 /usr/libexec/gsd-power
+mike_p      2139    1757  0 64280 11412   1 12:58 ?        00:00:00 /usr/libexec/gsd-print-notifications
+mike_p      2140    1757  0 116499 6264   1 12:58 ?        00:00:00 /usr/libexec/gsd-rfkill
+mike_p      2141    1757  0 61133  5860   1 12:58 ?        00:00:00 /usr/libexec/gsd-screensaver-proxy
+mike_p      2142    1757  0 118511 11016  0 12:58 ?        00:00:00 /usr/libexec/gsd-sharing
+mike_p      2146    1757  0 117973 8808   1 12:58 ?        00:00:00 /usr/libexec/gsd-smartcard
+mike_p      2149    1757  0 82124  9472   0 12:58 ?        00:00:00 /usr/libexec/gsd-sound
+mike_p      2159    1757  0 116959 7556   1 12:58 ?        00:00:00 /usr/libexec/gsd-usb-protection
+mike_p      2161    1757  0 87649 24856   1 12:58 ?        00:00:00 /usr/libexec/gsd-wacom
+mike_p      2164    1757  0 80789  8580   1 12:58 ?        00:00:00 /usr/libexec/gsd-wwan
+mike_p      2169    1757  0 88012 26640   3 12:58 ?        00:00:00 /usr/libexec/gsd-xsettings
+mike_p      2180    1999  0 80438  8340   2 12:58 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indicator-messages/indicator-messages-service
+mike_p      2204    1999  0 57950  6004   2 12:58 ?        00:00:00 /usr/libexec/gsd-disk-utility-notify
+mike_p      2205    1999  0 161903 60464  1 12:58 ?        00:00:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+mike_p      2246    1757  0 87772 15288   1 12:58 ?        00:00:00 /usr/libexec/gsd-printer
+mike_p      2256    2038  0 42930  7336   0 12:58 ?        00:00:04 /usr/libexec/ibus-engine-simple
+mike_p      2266    1757  0 210651 76912  1 12:58 ?        00:00:04 /snap/snap-store/558/usr/bin/snap-store --gapplication-service
+mike_p      2308    1757  0 135073 6764   0 12:58 ?        00:00:00 /usr/libexec/xdg-document-portal
+mike_p      2413    1779  0 80757  8352   1 12:58 ?        00:00:00 /usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/gvfs/exec_spaw/0
+mike_p      2429    1757  0 154802 10776  0 12:58 ?        00:00:00 /usr/libexec/xdg-desktop-portal
+mike_p      2433    1757  0 125016 27248  3 12:58 ?        00:00:00 /usr/libexec/xdg-desktop-portal-gtk
+root        2444       1  0 98544 31776   0 12:58 ?        00:00:01 /usr/libexec/fwupd/fwupd
+mike_p      2983    1757  0 42787  6600   2 12:59 ?        00:00:00 /usr/libexec/gvfsd-metadata
+mike_p      2986    1999  0 106931 32340  1 12:59 ?        00:00:00 update-notifier
+mike_p      3026    2014  0   654  1644   3 13:00 ?        00:00:00 /bin/sh /snap/pycharm-professional/269/bin/pycharm.sh
+mike_p      3070    3026 37 2020075 3796856 0 13:00 ?      00:31:56 /snap/pycharm-professional/269/jbr/bin/java -classpath /snap/pycharm-professional/269/lib/util.jar:/snap/pycharm-professional/269/lib/bootstrap.jar -Xms128m -Xmx750m -XX:ReservedCodeCacheSize=512m -XX:+IgnoreUnrecognizedVMOptions -XX:+UseG1GC -XX:SoftRefLRUPolicyMSPerMB=50 -XX:CICompilerCount=2 -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -ea -Dsun.io.useCanonCaches=false -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Dkotlinx.coroutines.debug=off -Dsun.tools.attach.tmp.only=true -Xmx2048m -XX:ErrorFile=/home/mike_p/java_error_in_pycharm_%p.log -XX:HeapDumpPath=/home/mike_p/java_error_in_pycharm_.hprof -Djb.vmOptionsFile=/home/mike_p/.config/JetBrains/PyCharm2021.3/pycharm64.vmoptions -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader -Didea.vendor.name=JetBrains -Didea.paths.selector=PyCharm2021.3 -Didea.platform.prefix=Python -Dsplash=true com.intellij.idea.Main
+mike_p      3456    3070  0   857  1992   1 13:00 ?        00:00:00 /snap/pycharm-professional/269/bin/fsnotifier
+mike_p      3605    3070  0 57686 49672   2 13:01 ?        00:00:00 /snap/pycharm-professional/269/jbr/lib/jcef_helper --type=zygote --no-zygote-sandbox --disable-in-process-stack-traces --no-sandbox --force-device-scale-factor=2.0 --locales-dir-path=/snap/pycharm-professional/269/jbr/lib/locales --log-file=/home/mike_p/jcef_3070.log --log-severity=disable --resources-dir-path=/snap/pycharm-professional/269/jbr/lib --lang=en-US
+mike_p      3606    3070  0 57686 49492   2 13:01 ?        00:00:00 /snap/pycharm-professional/269/jbr/lib/jcef_helper --type=zygote --disable-in-process-stack-traces --no-sandbox --force-device-scale-factor=2.0 --locales-dir-path=/snap/pycharm-professional/269/jbr/lib/locales --log-file=/home/mike_p/jcef_3070.log --log-severity=disable --resources-dir-path=/snap/pycharm-professional/269/jbr/lib --lang=en-US
+mike_p      3634    3605  0 315853 146820 1 13:01 ?        00:00:00 /snap/pycharm-professional/269/jbr/lib/jcef_helper --type=gpu-process --field-trial-handle=10028388255444139562,16574815895618848291,131072 --enable-features=CastMediaRouteProvider --disable-features=SpareRendererForSitePerProcess --no-sandbox --locales-dir-path=/snap/pycharm-professional/269/jbr/lib/locales --log-file=/home/mike_p/jcef_3070.log --log-severity=disable --resources-dir-path=/snap/pycharm-professional/269/jbr/lib --lang=en-US --gpu-preferences=UAAAAAAAAAAgACAQAAAAAAAAAAAAAAAAAABgAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --disable-in-process-stack-traces --log-file=/home/mike_p/jcef_3070.log --shared-files
+mike_p      3646    3070  0 168309 62016  3 13:01 ?        00:00:00 /snap/pycharm-professional/269/jbr/lib/jcef_helper --type=utility --utility-sub-type=network.mojom.NetworkService --field-trial-handle=10028388255444139562,16574815895618848291,131072 --enable-features=CastMediaRouteProvider --disable-features=SpareRendererForSitePerProcess --lang=ru --service-sandbox-type=network --no-sandbox --locales-dir-path=/snap/pycharm-professional/269/jbr/lib/locales --log-file=/home/mike_p/jcef_3070.log --log-severity=disable --resources-dir-path=/snap/pycharm-professional/269/jbr/lib --lang=en-US --disable-in-process-stack-traces --log-file=/home/mike_p/jcef_3070.log --shared-files=v8_context_snapshot_data:100
+mike_p      3968    1757  3 4335867 323384 1 13:01 ?       00:02:56 /opt/google/chrome/chrome --enable-crashpad
+mike_p      3975    3968  0  4215   524   3 13:01 ?        00:00:00 cat
+mike_p      3976    3968  0  4215   588   2 13:01 ?        00:00:00 cat
+mike_p      3978    1757  0 4199975 3148  0 13:01 ?        00:00:00 /opt/google/chrome/chrome_crashpad_handler --monitor-self --monitor-self-annotation=ptype=crashpad-handler --database=/home/mike_p/.config/google-chrome/Crash Reports --metrics-dir=/home/mike_p/.config/google-chrome --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=lsb-release=Ubuntu 20.04.3 LTS --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=96.0.4664.110 --initial-client-fd=5 --shared-client-connection
+mike_p      3980    1757  0 4197666 2912  0 13:01 ?        00:00:00 /opt/google/chrome/chrome_crashpad_handler --no-periodic-tasks --monitor-self-annotation=ptype=crashpad-handler --database=/home/mike_p/.config/google-chrome/Crash Reports --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=lsb-release=Ubuntu 20.04.3 LTS --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=96.0.4664.110 --initial-client-fd=4 --shared-client-connection
+mike_p      3986    3968  0 4262458 57556 2 13:01 ?        00:00:00 /opt/google/chrome/chrome --type=zygote --no-zygote-sandbox --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --change-stack-guard-on-fork=enable --enable-crashpad
+mike_p      3987    3968  0 4262458 58024 2 13:01 ?        00:00:00 /opt/google/chrome/chrome --type=zygote --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --change-stack-guard-on-fork=enable --enable-crashpad
+mike_p      3988    3987  0 4203261 8420  2 13:01 ?        00:00:00 /opt/google/chrome/nacl_helper
+mike_p      3991    3987  0 4262458 15740 0 13:01 ?        00:00:00 /opt/google/chrome/chrome --type=zygote --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --change-stack-guard-on-fork=enable --enable-crashpad
+mike_p      4015    3986  1 4385774 161260 3 13:01 ?       00:01:37 /opt/google/chrome/chrome --type=gpu-process --field-trial-handle=1792256190141412681,13490823663328876270,131072 --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --change-stack-guard-on-fork=enable --gpu-preferences=UAAAAAAAAAAgAAAIAAAAAAAAAAAAAAAAAABgAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABgAAAAAAAAAGAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --shared-files
+mike_p      4017    3968  1 4283420 117008 1 13:01 ?       00:01:09 /opt/google/chrome/chrome --type=utility --utility-sub-type=network.mojom.NetworkService --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --service-sandbox-type=none --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --enable-crashpad
+mike_p      4018    3991  0 4274852 50984 3 13:01 ?        00:00:01 /opt/google/chrome/chrome --type=utility --utility-sub-type=storage.mojom.StorageService --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --service-sandbox-type=utility --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100
+mike_p      4040    3991  0 6382934 113624 1 13:01 ?       00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=9 --shared-files=v8_context_snapshot_data:100
+mike_p      4051    3991  0 6383223 96816 0 13:01 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --extension-process --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --shared-files=v8_context_snapshot_data:100
+mike_p      4071    3991  0 6388075 149432 2 13:01 ?       00:00:08 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=13 --shared-files=v8_context_snapshot_data:100
+mike_p      4089    3991  0 6385466 185412 2 13:01 ?       00:00:26 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --extension-process --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=6 --shared-files=v8_context_snapshot_data:100
+mike_p      4141    3991  0 6382901 86516 1 13:01 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --extension-process --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=7 --shared-files=v8_context_snapshot_data:100
+mike_p      4162    3991  0 6382901 83560 2 13:01 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --extension-process --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=8 --shared-files=v8_context_snapshot_data:100
+mike_p      4258    3991  0 6407839 242560 3 13:01 ?       00:00:22 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=21 --shared-files=v8_context_snapshot_data:100
+mike_p      4259    3991  0 6389930 213224 1 13:01 ?       00:00:15 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --extension-process --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=14 --shared-files=v8_context_snapshot_data:100
+mike_p      4283    3991  0 6389550 138220 0 13:01 ?       00:00:05 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=12 --shared-files=v8_context_snapshot_data:100
+mike_p      4297    3991  0 7448038 247984 1 13:01 ?       00:00:12 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=16 --shared-files=v8_context_snapshot_data:100
+mike_p      4311    3991  0 6382934 101568 3 13:01 ?       00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=26 --shared-files=v8_context_snapshot_data:100
+mike_p      4348    3991  0 6382934 170540 0 13:01 ?       00:00:01 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=29 --shared-files=v8_context_snapshot_data:100
+mike_p      4364    3968  0 4336838 75628 2 13:01 ?        00:00:00 /opt/google/chrome/chrome --type=utility --utility-sub-type=audio.mojom.AudioService --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --service-sandbox-type=none --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --enable-crashpad
+mike_p      4401    3991  0 6382900 74344 0 13:01 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=34 --shared-files=v8_context_snapshot_data:100
+mike_p      4413    3991  0 6382935 109944 3 13:01 ?       00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=35 --shared-files=v8_context_snapshot_data:100
+mike_p      4425    3991  0 6382934 114104 0 13:01 ?       00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=36 --shared-files=v8_context_snapshot_data:100
+mike_p      4437    3991  0 6394583 132028 2 13:01 ?       00:00:09 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=37 --shared-files=v8_context_snapshot_data:100
+mike_p      4448    3991  0 6384983 121156 1 13:01 ?       00:00:03 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=38 --shared-files=v8_context_snapshot_data:100
+mike_p      4461    3991  0 6380851 74124 0 13:01 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=39 --shared-files=v8_context_snapshot_data:100
+mike_p      4474    3991  0 7448012 217124 2 13:01 ?       00:00:07 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=17 --shared-files=v8_context_snapshot_data:100
+mike_p      4492    3991  0 6380851 73160 2 13:01 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=40 --shared-files=v8_context_snapshot_data:100
+mike_p      4506    3991  0 7448011 204596 2 13:01 ?       00:00:07 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=15 --shared-files=v8_context_snapshot_data:100
+mike_p      4538    3991  0 8492245 334572 1 13:01 ?       00:00:40 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --extension-process --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=10 --shared-files=v8_context_snapshot_data:100
+root        4959       2  1     0     0   1 13:17 ?        00:00:43 [kworker/1:2-events]
+root        5457       2  0     0     0   3 13:35 ?        00:00:02 [kworker/3:1-events]
+mike_p      5504    3070  0 1083894 92376 0 13:36 ?        00:00:07 /snap/pycharm-professional/269/jbr/bin/java -Djava.rmi.server.hostname=127.0.0.1 -Duser.timezone=UTC -Xmx750m -Xms128m -Dfile.encoding=UTF-8 -classpath /snap/pycharm-professional/269/lib/util.jar:/snap/pycharm-professional/269/lib/org_codehaus_groovy_groovy.jar:/snap/pycharm-professional/269/plugins/DatabaseTools/lib/jdbc-console.jar:/home/mike_p/.config/JetBrains/PyCharm2021.3/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar com.intellij.database.remote.RemoteJdbcServer org.sqlite.JDBC
+root        6479       2  0     0     0   2 13:55 ?        00:00:01 [kworker/2:1-events]
+root        6724       2  0     0     0   3 14:00 ?        00:00:00 [kworker/3:0-events]
+root        6838       2  0     0     0   3 14:00 ?        00:00:01 [kworker/u8:0-events_unbound]
+mike_p      6933    3991  1 6385771 142488 2 14:02 ?       00:00:15 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=89 --shared-files=v8_context_snapshot_data:100
+root        6950       2  0     0     0   2 14:02 ?        00:00:00 [kworker/2:2-events]
+mike_p      7018    3991  0 5323428 48544 2 14:02 ?        00:00:00 /opt/google/chrome/chrome --type=utility --utility-sub-type=proxy_resolver.mojom.ProxyResolverFactory --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --service-sandbox-type=service --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100
+mike_p      7264    3991  0 6385798 147488 3 14:07 ?       00:00:03 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=97 --shared-files=v8_context_snapshot_data:100
+root        7307       2  0     0     0   1 14:08 ?        00:00:00 [kworker/1:1-events]
+mike_p      7395    3991  0 6382900 74008 2 14:10 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=98 --shared-files=v8_context_snapshot_data:100
+root        7557       2  0     0     0   0 14:14 ?        00:00:00 [kworker/0:2-mm_percpu_wq]
+mike_p      7595    3991  0 6386689 134028 0 14:14 ?       00:00:02 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=102 --shared-files=v8_context_snapshot_data:100
+root        7626       2  0     0     0   0 14:15 ?        00:00:00 [kworker/u8:2-events_power_efficient]
+root        7785       2  0     0     0   0 14:19 ?        00:00:00 [kworker/0:1-events]
+mike_p      7909    3991  0 6395392 141968 2 14:22 ?       00:00:02 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=103 --shared-files=v8_context_snapshot_data:100
+mike_p      7929    3991  0 6382900 62604 2 14:22 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --enable-crashpad --crashpad-handler-pid=3978 --enable-crash-reporter=c8174749-1291-4147-b866-c1ba66b23b7a, --display-capture-permissions-policy-allowed --origin-trial-disabled-features=CaptureHandle --change-stack-guard-on-fork=enable --field-trial-handle=1792256190141412681,13490823663328876270,131072 --lang=ru --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=104 --shared-files=v8_context_snapshot_data:100
+root        8046       2  0     0     0   3 14:23 ?        00:00:00 [kworker/3:2]
+root        8178       2  0     0     0   0 14:26 ?        00:00:00 [kworker/0:0-events]
+root        8198     289  0  6041  5272   1 14:26 ?        00:00:00 /lib/systemd/systemd-udevd
+mike_p      8199    3070  0  6982 10600   2 14:26 ?        00:00:00 /home/mike_p/PycharmProjects/python_advanced/venv_ubuntu/bin/python /home/mike_p/PycharmProjects/python_advanced/module_12_multitasking_2/homework/hw2/task.py
+mike_p      8200    8199  0  5041  3340   3 14:26 ?        00:00:00 ps -eF
