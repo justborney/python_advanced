@@ -22,6 +22,67 @@
 """
 import sqlite3
 
+names_list = ['Гидра', 'Дева', 'Большая Медведица', 'Кит', 'Геркулес', 'Эридан', 'Пегас', 'Дракон', 'Центавр',
+              'Водолей', 'Змееносец', 'Лев', 'Волопас', 'Рыбы', 'Стрелец', 'Лебедь', 'Телец', 'Жираф', 'Андромеда',
+              'Корма', 'Возничий', 'Орёл', 'Змея', 'Персей', 'Кассиопея', 'Орион', 'Цефей', 'Рысь', 'Весы', 'Близнецы',
+              'Рак', 'Паруса', 'Скорпион', 'Киль', 'Единорог', 'Скульптор', 'Феникс', 'Гончие Псы', 'Овен', 'Козерог',
+              'Печь', 'Волосы Вероники', 'Большой Пёс', 'Павлин', 'Журавль', 'Волк', 'Секстант', 'Тукан', 'Индеец',
+              'Октант', 'Заяц', 'Лира', 'Чаша', 'Голубь', 'Лисичка', 'Малая Медведица', 'Телескоп', 'Часы', 'Живописец',
+              'Южная Рыба', 'Южная Гидра', 'Насос', 'Жертвенник', 'Малый Лев']
+
+countries_list = ['Австралия', 'Австрия', 'Азербайджан', 'Албания', 'Алжир', 'Ангола', 'Андорра', 'Антигуа и Барбуда',
+                  'Аргентина', 'Армения', 'Афганистан', 'Багамы', 'Бангладеш', 'Барбадос', 'Бахрейн', 'Белоруссия',
+                  'Белиз', 'Бельгия', 'Бенин', 'Болгария', 'Боливия', 'Босния и Герцеговина', 'Ботсвана', 'Бразилия',
+                  'Бруней', 'Буркина-Фасо', 'Бурунди', 'Бутан', 'Вануату', 'Великобритания', 'Венгрия', 'Венесуэла',
+                  'Восточный Тимор', 'Вьетнам', 'Габон', 'Гаити', 'Гайана', 'Гамбия', 'Гана', 'Гватемала', 'Гвинея',
+                  'Гвинея-Бисау', 'Германия', 'Гондурас', 'Гренада', 'Греция', 'Грузия', 'Дания', 'Джибути', 'Доминика',
+                  'Доминиканская Республика', 'Египет', 'Замбия', 'Зимбабве', 'Израиль', 'Индия', 'Индонезия',
+                  'Иордания', 'Ирак', 'Иран', 'Ирландия', 'Исландия', 'Испания', 'Италия']
+
+sql_add_team = """
+INSERT INTO `uefa_commands` (command_number, command_name, command_country, command_level) 
+VALUES (?, ?, ?, ?)
+"""
+
+sql_draw_team = """
+INSERT INTO 'uefa_draw' (command_number, group_number)
+VALUES (?, ?)
+"""
+
 
 def generate_test_data(c: sqlite3.Cursor, number_of_groups: int) -> None:
-    ...
+    for i in range(1, number_of_groups + 1):
+        c.execute(sql_add_team, (i,
+                                 names_list[i - 1],
+                                 countries_list[i - 1],
+                                 'слабая'))
+
+        c.execute(sql_draw_team, (i, i))
+
+        c.execute(sql_add_team, (i + number_of_groups,
+                                 names_list[i - 1 + number_of_groups],
+                                 countries_list[i - 1 + number_of_groups],
+                                 'сильная'))
+
+        c.execute(sql_draw_team, (i + number_of_groups, i))
+
+        c.execute(sql_add_team, (i + number_of_groups * 2,
+                                 names_list[i - 1 + number_of_groups * 2],
+                                 countries_list[i - 1 + number_of_groups * 2],
+                                 'средняя'))
+
+        c.execute(sql_draw_team, (i + number_of_groups * 2, i))
+
+        c.execute(sql_add_team, (i + number_of_groups * 3,
+                                 names_list[i - 1 + number_of_groups * 3],
+                                 countries_list[i - 1 + number_of_groups * 3],
+                                 'средняя'))
+
+        c.execute(sql_draw_team, (i + number_of_groups * 3, i))
+
+
+if __name__ == '__main__':
+    with sqlite3.connect("hw.db") as conn:
+        cursor = conn.cursor()
+
+        generate_test_data(cursor, 4)

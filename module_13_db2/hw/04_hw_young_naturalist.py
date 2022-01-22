@@ -17,17 +17,39 @@
 import datetime
 import sqlite3
 
+sql_create_table_birds = """
+CREATE TABLE IF NOT EXISTS 'table_birds'(
+id INTEGER PRIMARY KEY,
+bird_name TEXT NOT NULL,
+date_time DATA NOT NULL)
+"""
+
+sql_add_bird = """
+INSERT INTO `table_birds` (bird_name, date_time) 
+VALUES (?, ?)
+"""
+
+sql_check_bird = """
+SELECT COUNT (*) FROM 'table_birds'
+WHERE bird_name = ?
+"""
+
 
 def log_bird(
         c: sqlite3.Cursor,
         bird_name: str,
         date_time: str,
 ) -> None:
-    ...
+    c.execute(sql_add_bird, (bird_name, date_time))
 
 
 def check_if_such_bird_already_seen(c: sqlite3.Cursor, bird_name: str) -> bool:
-    ...
+    c.execute(sql_check_bird, (bird_name,))
+    result, *_ = c.fetchone()
+
+    if result > 1:
+        return True
+    return False
 
 
 if __name__ == "__main__":
@@ -39,6 +61,9 @@ if __name__ == "__main__":
 
     with sqlite3.connect("hw.db") as connection:
         cursor = connection.cursor()
+
+        cursor.execute(sql_create_table_birds)
+
         log_bird(cursor, name, right_now)
 
         if check_if_such_bird_already_seen(cursor, name):
