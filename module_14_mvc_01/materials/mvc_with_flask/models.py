@@ -50,13 +50,15 @@ def books_count():
 
 
 def get_all_books() -> List[Book]:
+    books_list = []
     with sqlite3.connect('table_books.db') as conn:
         cursor = conn.cursor()
         cursor.execute('SELECT * from `table_books`')
         all_books = cursor.fetchall()
         for book in all_books:
             cursor.execute(increase_book_views(), (book[3] + 1, book[0]))
-        return [Book(*row) for row in all_books]
+            books_list.append(Book(book[1], book[2], book[0], book[3]))
+        return books_list
 
 
 def add_book_func(form) -> tuple:

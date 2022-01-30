@@ -60,8 +60,10 @@ def get_books_form():
     return render_template('add_book.html')
 
 
-@app.route("/books/add", methods=["POST"])
+@app.route("/books/add", methods=["GET", "POST"])
 def add_book():
+    if request.method == "GET":
+        return render_template('add_book.html')
     wt_form = AddingBookForm(request.form)
     if wt_form.validate_on_submit():
         return render_template('adding_book_result.html', result=add_book_func(wt_form))
