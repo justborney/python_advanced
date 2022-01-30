@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-style-10">
+    {% if result[1] %}
+    <h1>Book was added!</h1>
+    {% else %}
+    <h1>Book was added earlier!</h1>
+    {% endif %}
+    <div class="section"><span>1</span>Book title</div>
+    <p> {{ result[0].title}}
+    </p>
+    <div class="section"><span>2</span>Author full name</div>
+    <p> {{ result[0].author}}
+    </p>
+    <form action="form">
+        <div class="button-section">
+            <input type="submit"/>
+        </div>
+    </form>
+</div>
+{% endblock %}

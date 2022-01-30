@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-style-10">
+    <h1>Search the books!<span>Feel the field and get all books of the author from the DB!</span></h1>
+    <form action="/books/search-result" method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <div class="section">Author full name</div>
+        <div class="inner-wrap">
+            <label>Author full name<input type="text" name="author"/></label>
+        </div>
+
+        <div class="button-section">
+            <input type="submit" name="Searching books"/>
+        </div>
+    </form>
+</div>
+{% endblock %}

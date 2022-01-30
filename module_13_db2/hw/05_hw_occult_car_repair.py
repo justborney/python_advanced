@@ -40,3 +40,20 @@ if __name__ == "__main__":
         cursor = conn.cursor()
 
         print(get_number_of_luckers(cursor, 11))
+
+
+# _SQL_request = """
+# SELECT COUNT(*) FROM 'table_occult_car_repair' WHERE car_colour = ? and (car_type in (?, ?)) and timestamp LIKE ?
+# """
+#
+#
+# def get_number_of_luckers(c: sqlite3.Cursor, month: int) -> int:
+#     if len(str(month)) < 2:
+#         value = '0' + str(month)
+#     else:
+#         value = str(month)
+#     string = f'%-{value}-%'
+#
+#     c.execute(_SQL_request, ('чёрный', 'BMW', 'Лада', string))
+#     result = c.fetchone()
+#     return result[0]

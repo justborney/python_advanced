@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-style-10">
+    {% if result[1]|length == 0 %}
+    <h1>No books of the author!<span>There are no one book of the author at the DB!</span></h1>
+    {% else %}
+    <h1>Result of the search</h1>
+    <div class="section">Author full name</div>
+    <p> {{ result[0]}}
+    </p>
+    {% set counter = 1 %}
+    {% for record in result[1] %}
+    <div class="section">Book title</div>
+    <div class="section"><span>{{counter + loop.index0}}</span></div>
+    <p>{{ record[1] }}</p>
+    <div class="section">Book views</div>
+    <p>{{ record[3] }}</p>
+    {% endfor %}
+    {% endif %}
+    <form action="search">
+        <div class="button-section">
+            <input type="submit"/>
+        </div>
+    </form>
+</div>
+{% endblock %}
