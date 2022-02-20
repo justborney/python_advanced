@@ -140,6 +140,9 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [
@@ -149,8 +152,15 @@
 						"type": "text"
 					}
 				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
 				"url": {
-					"raw": "{{url}}/room?checkIn={{checkInDate}}&checkOut={{checkOutDate}}&guestsNum=2",
+					"raw": "{{url}}/room?checkIn={{checkInDate}}&checkOut={{checkOutDate}}&guestsNum=4",
 					"host": [
 						"{{url}}"
 					],
@@ -168,7 +178,7 @@
 						},
 						{
 							"key": "guestsNum",
-							"value": "2"
+							"value": "4"
 						}
 					]
 				}
@@ -294,7 +304,7 @@
 		},
 		{
 			"key": "roomId",
-			"value": "2"
+			"value": "3"
 		}
 	]
 }

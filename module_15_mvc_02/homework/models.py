@@ -242,10 +242,10 @@ def booking_room():
                 if guestId == 0:
                     guestId = add_guest_in_db(firstName, lastName)
                 book_the_room(roomId, int(checkIn), int(checkOut), int(guestId))
-                return json.dumps(f'Room with id "{roomId}" was booked '
+                return json.dumps(f'Room with id {roomId} was booked '
                                   f'for {firstName} {lastName} '
                                   f'from {datetime.strptime(str(checkIn), "%Y%m%d").date()} '
                                   f'to {datetime.strptime(str(checkOut), "%Y%m%d").date()}', indent=4), 200
-            return 'Room is booked yet', 409
-        return 'Wrong date'
-    return 'No token'
+            return json.dumps({'Room is booked yet'}, indent=4), 409
+        return json.dumps({'res': 'Wrong date'}, indent=4), 200
+    return json.dumps({'res': 'No token'}, indent=4), 409
