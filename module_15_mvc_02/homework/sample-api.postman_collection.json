@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1ebf12fa-b158-4eec-b9f2-0f768915c689",
+		"_postman_id": "32ca4fcf-46f8-49be-bdf1-f39dec4d9c3b",
 		"name": "sample-api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -249,7 +249,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"bookingDates\": {\n        \"checkIn\": {{checkInDate}},\n        \"checkOut\": {{checkOutDate}}\n    },\n    \"firstName\": \"John\",\n    \"lastName\": \"Smith\",\n    \"roomId\": {{roomId}}\n}",
+					"raw": "{\n    \"bookingDates\": {\n        \"checkIn\": {{checkInDate}},\n        \"checkOut\": {{checkOutDate}}\n    },\n    \"firstName\": \"John\",\n    \"lastName\": \"Smith\",\n    \"roomId\": 3\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -296,15 +296,11 @@
 		},
 		{
 			"key": "checkInDate",
-			"value": "20210308"
+			"value": "20220308"
 		},
 		{
 			"key": "checkOutDate",
-			"value": "20210311"
-		},
-		{
-			"key": "roomId",
-			"value": "3"
+			"value": "20220311"
 		}
 	]
 }

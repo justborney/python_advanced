@@ -159,7 +159,7 @@ def check_room_is_free(rooms_id: List, checkIn: int, checkOut: int) -> List[int]
 
 
 def check_dates_are_correct(checkIn: int, checkOut: int) -> bool:
-    if checkOut <= checkIn or datetime.strptime(str(checkIn), "%Y%m%d") < datetime.now():
+    if checkOut <= checkIn or datetime.strptime(str(checkIn), "%Y%m%d").date() < datetime.today().date():
         return False
     return True
 
@@ -230,7 +230,7 @@ def book_the_room(roomId: int, checkIn: int, checkOut: int, guestId: int) -> Non
 
 def booking_room():
     if request.cookies.get('token'):
-        request_data = json.loads(request.data.decode('utf-8'))
+        request_data = request.json
         checkIn = request_data['bookingDates']['checkIn']
         checkOut = request_data['bookingDates']['checkOut']
         roomId = int(request_data['roomId'])
