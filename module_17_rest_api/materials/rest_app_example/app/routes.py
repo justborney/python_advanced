@@ -67,16 +67,17 @@ class BookList(Resource):
 
 class AuthorList(Resource):
     def get(self, author_id=None) -> Optional[Tuple[str, int]]:
-        schema = BookSchema()
+        book_schema = BookSchema()
+        author_schema = AuthorSchema()
         if author_id:
             author = get_author_by_id(author_id)
             if author:
                 all_books = get_all_author_books(author_id)
                 if len(all_books) == 0:
                     return f'No any books of author with id {author_id}', 200
-                return schema.dump(all_books, many=True), 200
+                return book_schema.dump(all_books, many=True), 200
             return f'No author with id {author_id}', 400
-        return schema.dump(get_all_authors(), many=True), 200
+        return author_schema.dump(get_all_authors(), many=True), 200
 
     def post(self) -> Tuple[Dict, int]:
         data = request.json
@@ -88,16 +89,18 @@ class AuthorList(Resource):
         author = add_author(author)
         return schema.dump(author), 201
 
-    def put(self, author_id: int) -> Tuple[Dict, int]:
+    def put(self, author_id: int) -> Optional[Tuple]:
         data = request.json
         schema = AuthorSchema()
         try:
             author = schema.load(data)
         except ValidationError as exc:
             return exc.messages, 400
-        author.id = author_id
-        update_author_by_id(author)
-        return schema.dump(author), 201
+        if get_author_by_id(author_id):
+            author.id = author_id
+            update_author_by_id(author)
+            return schema.dump(author), 201
+        return f'No author with id {author_id}', 400
 
     def delete(self, author_id: int) -> Tuple[str, int]:
         if get_author_by_id(author_id):
