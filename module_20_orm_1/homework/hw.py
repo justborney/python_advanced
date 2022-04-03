@@ -1,8 +1,8 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
-from sqlalchemy import Column, Integer, Date, Text, Float, Boolean, DateTime, create_engine, case, func
+from sqlalchemy import Column, Integer, Date, Text, Float, Boolean, DateTime, create_engine
 from sqlalchemy.exc import NoResultFound
-from sqlalchemy.ext.hybrid import hybrid_property
+from sqlalchemy.ext.hybrid import hybrid_property, hybrid_method
 from sqlalchemy.orm import declarative_base, sessionmaker
 from flask import Flask, jsonify, request
 from typing import Dict, Any, Optional, Tuple
@@ -79,24 +79,16 @@ class ReceivingBook(Base):
     date_of_return = Column(DateTime)
 
     @hybrid_property
-    def count_date_with_book(self):
-        """Counting a days while student keeps holding a book"""
-        if self.date_of_return is None:
-            self.date_of_return = datetime.now()
-        print(self.date_of_return)
-        self.count_date_with_book = (self.date_of_return.date() - self.date_of_issue.date()).days
-        return self.count_date_with_book
+    def days_with_a_book(self):
+        """Days while student keeps holding a book"""
+        if self.date_of_return:
+            return self.date_of_return - self.date_of_issue
+        return datetime.now() - self.date_of_issue
 
-    @count_date_with_book.expression
-    def count_date_with_book(cls):
-        if cls.date_of_return == 0:
-            cls.date_of_return = datetime.now()
-        cls.count_date_with_book = (cls.date_of_return.date() - cls.date_of_issue.date()).days
-        return cls.count_date_with_book
-
-    @count_date_with_book.setter
-    def count_date_with_book(self, value):
-        self.count_date_with_book = value
+    @hybrid_method
+    def is_debtor(self, compare_date):
+        """Counting days while student keeps holding a book"""
+        return self.date_of_issue < compare_date
 
 
 @app.before_request
@@ -144,7 +136,8 @@ def books() -> Tuple:
 def receiving() -> Optional[Tuple]:
     if request.method == 'GET':
         """Getting all students that keep holding a book for 14 days or more"""
-        students = session.query(Student).join(ReceivingBook).filter(ReceivingBook.count_date_with_book >= 14)
+        deadline = datetime.now() - timedelta(days=14)
+        students = session.query(Student).filter(ReceivingBook.is_debtor(deadline))
         if students is None:
             return 'No debtors', 201
         students_list = []
