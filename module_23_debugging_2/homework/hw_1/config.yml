@@ -1,0 +1,136 @@
+# While a lot of configuration in Sentry can be changed via the UI, for all
+# new-style config (as of 8.0) you can also declare values here in this file
+# to enforce defaults or to ensure they cannot be changed via the UI. For more
+# information see the Sentry documentation.
+
+###############
+# Mail Server #
+###############
+
+mail.backend: 'smtp'  # Use dummy if you want to disable email entirely
+mail.host: 'smtp.mail.ru'
+mail.port: 465
+mail.username: 'mikle44@mail.ru'
+mail.password: '*****************'
+mail.use-tls: true
+# mail.use-ssl: false
+
+# NOTE: The following 2 configs (mail.from and mail.list-namespace) are set
+#       through SENTRY_MAIL_HOST in sentry.conf.py so remove those first if
+#       you want your values in this file to be effective!
+
+
+# The email address to send on behalf of
+mail.from: 'mikle44@mail.ru'
+
+# The mailing list namespace for emails sent by this Sentry server.
+# This should be a domain you own (often the same domain as the domain
+# part of the `mail.from` configuration parameter value) or `localhost`.
+mail.list-namespace: 'localhost'
+
+# If you'd like to configure email replies, enable this.
+# mail.enable-replies: true
+
+# When email-replies are enabled, this value is used in the Reply-To header
+# mail.reply-hostname: ''
+
+# If you're using mailgun for inbound mail, set your API key and configure a
+# route to forward to /api/hooks/mailgun/inbound/
+# Also don't forget to set `mail.enable-replies: true` above.
+# mail.mailgun-api-key: ''
+
+###################
+# System Settings #
+###################
+
+# If this file ever becomes compromised, it's important to generate a new key.
+# Changing this value will result in all current sessions being invalidated.
+# A new key can be generated with `$ sentry config generate-secret-key`
+system.secret-key: 'PmMLwa6BfqGSZMuP6FgS65]=vEk(nmMusQn:JHL5nKu&AkJ_9V'
+
+# The ``redis.clusters`` setting is used, unsurprisingly, to configure Redis
+# clusters. These clusters can be then referred to by name when configuring
+# backends such as the cache, digests, or TSDB backend.
+# redis.clusters:
+#   default:
+#     hosts:
+#       0:
+#         host: 127.0.0.1
+#         port: 6379
+
+################
+# File storage #
+################
+
+# Uploaded media uses these `filestore` settings. The available
+# backends are either `filesystem` or `s3`.
+
+filestore.backend: 'filesystem'
+filestore.options:
+  location: '/data/files'
+dsym.cache-path: '/data/dsym-cache'
+releasefile.cache-path: '/data/releasefile-cache'
+
+# filestore.backend: 's3'
+# filestore.options:
+#   access_key: 'AKIXXXXXX'
+#   secret_key: 'XXXXXXX'
+#   bucket_name: 's3-bucket-name'
+
+system.internal-url-prefix: 'http://web:9000'
+symbolicator.enabled: true
+symbolicator.options:
+  url: "http://symbolicator:3021"
+
+transaction-events.force-disable-internal-project: true
+
+######################
+# GitHub Integration #
+######################
+
+github-login.extended-permissions: [ 'repo' ]
+github-app.id: 194038
+github-app.name: 'senturyApp'
+# github-app.webhook-secret: 'GITHUB_WEBHOOK_SECRET' # Use only if configured in GitHub
+github-app.client-id: 'Iv1.c850aa83d4e40959'
+github-app.client-secret: 'adad64cafa98c7ced503eacf1661e5bec835b2ce'
+github-app.private-key:
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIEpAIBAAKCAQEAtemibHhuULVZAO9/bIbC6XDXI4on0sSHPlny6r46SPTF6nuU
+  0Az0Z2V1/spJP7co2WXhAaj402qFJA1kQs4JPSX86NYcj0ZA2OqovxsWFdsSVVei
+  vs6t/yp8UkIZrJzNDZ9zmBylU7qviw9y1DwRrnLXtYIGA/8YQpzMAQCyfm4rdaM3
+  l66X5/6McQNuUZyzEuK0vvyTYz4OP9DIJEDvOatLKmjIU37VpuMbV/vXQXZksJwL
+  /TULnIhcbMuHv0oaxdSpuffNmBIikehciG+V4JC3Jv5KR0uKTGIdn9VRxmvelGOV
+  Ej4N1+RkrjWCRDxFCyEFweTaBjVbcoQwTvRqKQIDAQABAoIBAQCapCIPU9FzirY+
+  tVn9SBIpoGNDMw7nfWn69zwpkcy6eFpHGwdGVbzuqLHGBvB92ZZAOPsuDhZ4ovTL
+  0RaKM9xmvwRgaqOcqHw36kPJMZ10tua+5eDTk58Wa2eEBe0Nb75g9kut46wnoWvZ
+  KyjSgr4FLltxUTcL7q8Q8Xn64DzcfBvS7+OftQX02ZNCdr4m7ftuGBMLs8RbPPoP
+  LY9+1UQQkUhkwwUZSUzzjkyW0eOR9fjVuyPHxXVpvUaTB0NPcxybtOft23T5UMSk
+  sgC13x43oNIg7HqLbrXM3jmqlaggmHrWEPg5L8KAcYalDxzL9XyH0oo/hnizmfmg
+  fVbTL16BAoGBAOMsCXS8h1BAeyBdxh2QqEfw6DMzEY/lIlbjtR3aM/dLBbKb/hUU
+  RUh7hSG5+CIVP4oacLgDDqxRPPHAYmr9KQ9RYovwMJowZcB0c4nssdD7AbE5CK6Q
+  xezbvNO/KmwqBQYMi8QSu1A7uJ6SKlyGE1krEjVhQhg+6M1mDv3lB7oDAoGBAMz/
+  SmbiGSNKJNZB8/BODytVpc39snnK26e3riADTTZl8mJX9XZjel5HCGVgHegttuC1
+  ZbvGfueIOyrISPRdTWVgXhoZdZRbcUgjFj/4rC3Htq39jWBYX2DhCmxkWML0LtgF
+  zcB7k9E9PKavktvNqYtH8n+3KqjPAaZWBTDeDyljAoGAbNT7Dr8HQG4zzpS+Rgm4
+  ZQbH50dvAXXvlprueQfBX5bEewX6mtSkQI5UgIzckE+HqjzyhWWJkQo2XUcin0j7
+  c8g0owAF+Mh45tOjSo9nvMuTyvic7SyUdd3rv7HUvA8Bax11lBC5Rj3mO6mgu8TL
+  3ishRQt8I6t30nczdXVU10sCgYEAmtPuA8qcpdSoAdMKROMP/fDQK8aC+A3I3OGT
+  98XGmWFiMfixAducXnxT0Q1JSUTNrOYUkkAXNRPlbCidQUL+46RnLlswPP7bjlpB
+  wcs1b9Y5GSw5jRzx3J/bWYZoq8X1Y17uyYQMXqpblqFgz/aDKRkMBH35EEpYuqKZ
+  hRESbnUCgYAxc6e8VT6Wt2flq0jdXNwrVsNpjA95dAVyQCs/3BHbeBT31wK/tVii
+  wbwA/y8tTIaZvdg1WFEBWSUYKhbX5/1U88rVb6roGwU4+OZz5JUOXrLreGDk+EdG
+  HWnRLQPRnj7Zs8ph9J4trjsRlEbvLxXgb8tCgYGn6l07lY1nTFuPaA==
+  -----END RSA PRIVATE KEY-----
+
+#####################
+# Slack Integration #
+#####################
+
+# Refer to https://develop.sentry.dev/integrations/slack/ for setup instructions.
+
+# slack.client-id: <'client id'>
+# slack.client-secret: <client secret>
+# slack.signing-secret: <signing secret>
+## If legacy-app is True use verfication-token instead of signing-secret
+# slack.verification-token: <verification token>
