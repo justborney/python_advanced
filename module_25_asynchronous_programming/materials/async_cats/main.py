@@ -11,6 +11,7 @@ OUT_PATH = Path(__file__).parent / 'cats'
 OUT_PATH.mkdir(exist_ok=True, parents=True)
 OUT_PATH = OUT_PATH.absolute()
 
+
 async def get_cat(client: aiohttp.ClientSession, idx: int) -> bytes:
     async with client.get(URL) as response:
         print(response.status)
