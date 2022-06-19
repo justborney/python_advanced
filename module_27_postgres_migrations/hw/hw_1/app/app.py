@@ -46,12 +46,12 @@ class User(Base):
                 self.__table__.columns}
 
 
-# @app.before_request
-# def before_request_func():
-#     Base.metadata.drop_all(engine)
-#     Base.metadata.create_all(engine)
-#     # res = requests.get('https://random-data-api.com/api/coffee/random_coffee?size=10')
-#     session.commit()
+@app.before_request
+def before_request_func():
+    Base.metadata.drop_all(engine)
+    Base.metadata.create_all(engine)
+    # res = requests.get('https://random-data-api.com/api/coffee/random_coffee?size=10')
+    session.commit()
 
 
 @app.route('/all')
