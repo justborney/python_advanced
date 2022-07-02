@@ -1,20 +1,17 @@
-import requests
-from sqlalchemy import Column, Integer, String, create_engine, ForeignKey, Boolean, JSON, ARRAY
-from sqlalchemy.orm import sessionmaker, declarative_base, relationship
-import time
 import random
-from flask import Flask
-import logging
-from typing import Tuple, Dict, Any
+from typing import Dict, Any
+
+import requests
+from flask import Flask, jsonify, request
+from sqlalchemy import Column, Integer, String, create_engine, ForeignKey, Boolean, JSON, ARRAY, insert, func, cast
+from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 
 app = Flask(__name__)
-engine = create_engine('postgresql+psycopg2://admin:admin@localhost')
+engine = create_engine('postgresql+psycopg2://admin:admin@postgres')
 Base = declarative_base()
 Session = sessionmaker(bind=engine)
 session = Session()
-
-
-# app.config['DEBUG'] = True
+app.config['DEBUG'] = True
 
 
 class Coffee(Base):
@@ -36,75 +33,101 @@ class User(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False)
+    surname = Column(String(50))
     has_sale = Column(Boolean)
     address = Column(JSON)
     coffee_id = Column(Integer, ForeignKey('coffee.id'))
-    relationship('Coffee', backref='users')
+    user = relationship('Coffee', backref='users')
+    patronymic = Column(String(50))
 
     def to_json(self) -> Dict[str, Any]:
         return {c.name: getattr(self, c.name) for c in
                 self.__table__.columns}
 
 
-@app.before_request
-def before_request_func():
-    Base.metadata.drop_all(engine)
-    Base.metadata.create_all(engine)
-    # res = requests.get('https://random-data-api.com/api/coffee/random_coffee?size=10')
+@app.before_first_request
+def before_first_request_func():
+    Base.metadata.drop_all(bind=engine)
+    Base.metadata.create_all(bind=engine)
+    coffee_data = requests.get('https://random-data-api.com/api/coffee/random_coffee?size=10').json()
+    all_coffee = []
+    for coffee in coffee_data:
+        all_coffee.append(
+            Coffee(title=coffee['blend_name'],
+                   origin=coffee['origin'],
+                   notes=coffee['notes'],
+                   intensifier=coffee['intensifier']))
+    session.bulk_save_objects(all_coffee)
+    user_address = requests.get('https://random-data-api.com/api/address/random_address?size=10').json()
+    all_users = []
+    for user in user_address:
+        all_users.append(
+            User(
+                name=requests.get('https://random-data-api.com/api/name/random_name').json()['name'],
+                address={'city': user['city'],
+                         'street_name': user['street_name'],
+                         'building_number': user['building_number'],
+                         'secondary_address': user['secondary_address'],
+                         'country': user['country']},
+                coffee_id=random.randint(1, 10)
+            ))
+    session.bulk_save_objects(all_users)
     session.commit()
 
 
-@app.route('/all')
-def get_all():
-    products = session.query(Coffee).all()
-    products_list = []
-    for p in products:
-        product_obj = p.to_json()
-        product_obj['user'] = p.user.to_json()
-        products_list.append(product_obj)
-    return products_list
+@app.route('/add_user/<name>', methods=['POST'])
+def add_user(name: str):
+    user_data = request.json
+    try:
+        if user_data['address']['city'] \
+                and user_data['address']['street_name'] \
+                and user_data['address']['building_number'] \
+                and user_data['address']['secondary_address'] \
+                and user_data['address']['country']:
+            session.execute(insert(User).values(name=name,
+                                                address=user_data['address'],
+                                                coffee_id=user_data['coffee_id']))
+            session.commit()
+            return jsonify({'new_user_name': name,
+                            'new_user_address': user_data['address'],
+                            'new_user_coffee': user_data['coffee_id']}), 200
+    except KeyError:
+        return 'Wrong input data', 500
 
 
-@app.route('/one')
-def the_first() -> Tuple[str, int]:
-    logging.info('one')
-    time.sleep(random.random() * 0.2)
-    return 'ok', 201
+@app.route('/looking_coffee/<coffee_name>')
+def find_coffee_by_name(coffee_name: str):
+    all_coffee = session.query(Coffee).filter(
+        func.to_tsvector(Coffee.title).match(cast(func.plainto_tsquery(coffee_name), String))).all()
+    coffee_list = []
+    for coffee in all_coffee:
+        json_coffee = coffee.to_json()
+        json_coffee['notes'] = ''.join(coffee.notes)
+        coffee_list.append(json_coffee)
+    return jsonify(coffee_list=coffee_list), 200
 
 
-@app.route('/two')
-def the_second() -> Tuple[str, int]:
-    logging.info('two')
-    time.sleep(random.random() * 0.4)
-    return 'ok', 202
+@app.route('/notes')
+def find_unique_coffee_note():
+    all_notes = session.query(Coffee.notes).all()
+    notes_list = set()
+    for note_string in all_notes:
+        note_record = ''
+        for symbol in note_string:
+            note_record = ''.join(symbol)
+        for note in note_record.split(', '):
+            notes_list.add(note)
+    return jsonify(notes_list=list(notes_list)), 200
 
 
-@app.route('/three')
-def the_third() -> Tuple[str, int]:
-    logging.info('three')
-    time.sleep(random.random() * 0.6)
-    return 'ok', 203
-
-
-@app.route('/four')
-def the_fourth() -> Tuple[str, int]:
-    logging.info('four')
-    time.sleep(random.random() * 0.8)
-    return 'ok', 204
-
-
-@app.route('/five')
-def the_fiveth() -> Tuple[str, int]:
-    logging.info('five')
-    time.sleep(random.random())
-    return 'ok', 205
-
-
-@app.route('/error')
-def error() -> Tuple[str, int]:
-    logging.info('error')
-    a = 1 / 0
-    return 'error', 500
+@app.route('/looking_users/<users_country>')
+def find_users_by_country(users_country: str):
+    all_users = session.query(User).filter(User.address['country'].as_string() == users_country).all()
+    user_list = []
+    for user in all_users:
+        json_user = user.to_json()
+        user_list.append(json_user)
+    return jsonify(user_list=user_list), 200
 
 
 if __name__ == "__main__":
