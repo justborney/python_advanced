@@ -19,6 +19,7 @@ async def startup():
 @app.on_event("shutdown")
 async def shutdown():
     await session.close()
+    await engine.dispose()
 
 
 @app.get("/recipes", response_model=List[schemas.AllRecipes])
