@@ -7,7 +7,6 @@ Base = declarative_base()
 
 class Recipe(Base):
     __tablename__ = "Recipe"
-    Base.metadata.clear()
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, index=True, nullable=False)
     cooking_time = Column(String, index=True, nullable=False)
