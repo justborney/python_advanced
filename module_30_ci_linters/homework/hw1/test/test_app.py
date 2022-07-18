@@ -1,14 +1,22 @@
 from fastapi.testclient import TestClient
 
 from ..src import models
-from ..src.database import session
 from ..src.main import app
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
-client = TestClient(app)
+DATABASE_URL = "sqlite:///./hw_app.db"
+
+engine = create_engine(DATABASE_URL, echo=True)
+Session = sessionmaker(bind=engine, expire_on_commit=False)
+session = Session()
+Base = declarative_base()
 
 
 def test_bd_connection():
-    response = client.get("/recipes")
+    with TestClient(app) as client:
+        response = client.get("/recipes")
     assert response.status_code == 200
     assert response.json() == []
 
@@ -40,7 +48,8 @@ def test_getting_all_recipes_sorted_by_popularity():
         ]
     )
     session.commit()
-    response = client.get("/recipes")
+    with TestClient(app) as client:
+        response = client.get("/recipes")
     assert response.status_code == 200
     assert response.json() == [
         {"cooking_time": "00:00:25", "title": "dish_3", "view_count": 5},
@@ -50,7 +59,8 @@ def test_getting_all_recipes_sorted_by_popularity():
 
 
 def test_getting_recipe_with_id_2():
-    response = client.get("/2")
+    with TestClient(app) as client:
+        response = client.get("/2")
     assert response.status_code == 200
     assert response.json() == {
         "cooking_time": "00:00:50",
@@ -58,3 +68,5 @@ def test_getting_recipe_with_id_2():
         "ingredients": "d, e, f",
         "title": "dish_2",
     }
+    session.query(models.Recipe).delete()
+    session.commit()
